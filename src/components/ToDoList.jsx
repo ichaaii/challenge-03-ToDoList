@@ -203,6 +203,32 @@ function TodoList() {
         ) : (
           <div className="container mx-auto mt-6">
             <div className="flex justify-center mb-6">
+  <button
+    className={`${
+      sortCriteria === "All" ? "bg-sunsetOrange" : "bg-gray-300"
+    } text-white p-1 rounded-md mr-2`}
+    onClick={() => handleSort("All")}
+  >
+    All
+  </button>
+  <button
+    className={`${
+      sortCriteria === "Completed" ? "bg-sunsetOrange" : "bg-gray-300"
+    } text-white p-1 rounded-md mr-2`}
+    onClick={() => handleSort("Completed")}
+  >
+    Completed
+  </button>
+  <button
+    className={`${
+      sortCriteria === "Not Completed" ? "bg-sunsetOrange" : "bg-gray-300"
+    } text-white p-1 rounded-md`}
+    onClick={() => handleSort("Not Completed")}
+  >
+    Not Completed
+  </button>
+</div>
+            {/* <div className="flex justify-center mb-6">
               <select
                 onChange={(e) => handleSort(e.target.value)}
                 className="p-1 outline-none text-sm"
@@ -217,7 +243,7 @@ function TodoList() {
                   Not Completed
                 </option>
               </select>
-            </div>
+            </div> */}
 
             <div>
               {sortToDoList.map((todo) => (
@@ -231,10 +257,6 @@ function TodoList() {
                       {todo.task}
                     </span>
 
-                  
-                    
-                    
-                  
                   {/* <div
                     className={`${
                       todo.completed
