@@ -1,0 +1,29 @@
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 24px; /* Jarak antara checkbox dan teks */
+  }
+  
+.custom-checkbox input[type="checkbox"] {
+    appearance: none; /* Menghilangkan gaya bawaan browser */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid pink; /* Warna border checkbox */
+    border-radius: 4px;
+    outline: none;
+    background-color: white; /* Latar belakang putih */
+    cursor: pointer;
+  }
+  
+  /* Mengatur tampilan centang (check) pada checkbox */
+  .custom-checkbox input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Unicode untuk centang (checkmark) */
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    font-size: 14px;
+    color: pink; /* Warna centang (check) */
+  }

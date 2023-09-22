@@ -9,6 +9,12 @@ export default {
       Poppins: "Poppins"
     },
     extend: {
+      // borderColor: theme => ({
+      //   'plastic-pink' : '#ff1493',
+      // }),
+      // backgroundColor: theme => ({
+      //   'plastic-pink' : '#ff1493',
+      // }),
       colors: {
         transparentBlack: "rgba(0,0,0,0.85)",
         sunsetOrange: "#FF4F5A",
